@@ -5,6 +5,11 @@
     <title>zad1</title>
 </head>
 <body>
+<header>
+    <h1>Biblioteka akademicka</h1>
+    <p>Wiedza otwiera drzwi &ndash; zapisz się i czytaj bez granic</p>
+</header>
+<main>
 <h1>Biblioteka Akademicka - Rejestracja czytelnika</h1>
 <form action="rejestracja.php" method="post" enctype="multipart/form-data">
     <fieldset>
@@ -115,7 +120,7 @@
         </p>
         <p>
             <label for="kolor-okladki">Ulubiony kolor okładki:</label><br>
-            <input type="color" id="kolor-okladki" name="kolor-okladki" value="red">
+            <input type="color" id="kolor-okladki" name="kolor-okladki" value="#3498db">
         </p>
         <p>
             <label for="profil-czyt">Link do profilu czytelnika (blog/strona):</label><br>
@@ -143,5 +148,10 @@
         <button id="wyczysc-form" type="reset">Wyczyść formularz</button>
     </p>
 </form>
+</main>
+<footer>
+    <p>&copy <time datetime="2026">2026</time> Biblioteka Akademicka. Wszelkie prawa zastrzeżone.</p>
+    <p>Kontakt: <a href="mailto:biblioteka@akademia.pl">biblioteka@akademia.pl</a></p>
+</footer>
 </body>
 </html>
