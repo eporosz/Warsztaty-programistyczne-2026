@@ -1,0 +1,216 @@
+body {
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    color: black;
+    background-color: #e9ecef;
+}
+
+header {
+    background-color: #0b3d5c;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+header h1 {
+    color: hsla(0, 0%, 100%);
+    font-size: 2.9em;
+    font-variant: small-caps;
+    margin: 5px;
+    text-shadow: black 3px 3px 12px, #3b9ec8 2px 2px 3px;
+}
+
+header p {
+    font-style: italic;
+    color: hsla(210, 80%, 90%);
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+nav {
+    background-color: rgb(155, 174, 191);
+    padding: 5px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px;
+}
+
+.nav-item {
+    display: inline;
+    padding: 10px;
+}
+
+.nav-item.active {
+    font-weight: bold;
+    color: #0d2c5c;
+}
+
+.info {
+    text-align: center;
+    font-style: italic;
+    margin: 30px;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+fieldset p {
+    word-spacing: 2px;
+    line-height: 25px;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+#dane_osobowe {
+    background-color: rgba(150, 214, 237, 0.25);
+
+}
+
+#dane_osobowe legend {
+    color: #14577e;
+}
+
+#dane_adresowe {
+    background-color: rgba(221, 188, 234, 0.25);
+}
+
+#dane_adresowe legend {
+    font-style: italic;
+    color: rebeccapurple;
+}
+
+#preferencje_czytelnicze {
+    background-color: rgba(169, 230, 166, 0.25);
+}
+
+#preferencje_czytelnicze legend {
+    font-style: italic;
+    color: darkgreen;
+    text-transform: uppercase;
+}
+
+#pesel {
+    font-family: monospace;
+    letter-spacing: 3px;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    padding: 5px;
+    margin-top: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type=radio] + label {
+    color: #0d2c5c;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+input[type=checkbox] + label {
+    color: #034e03;
+    font-weight: lighter;
+    font-style: italic;
+    margin-right: 15px;
+}
+
+input[type=text] {
+    background-color: aliceblue;
+    border: 2px solid #c0d3e4;
+}
+
+input[type=email] {
+    background-color: #fdf7ea;
+}
+
+input[type=tel] {
+    border: 2px dodgerblue;
+    border-style: dashed solid;
+}
+
+input[type=password] {
+    border: 2px ridge #0b3d5c;
+}
+
+input[type=date] {
+    border: 2px midnightblue;
+    border-style: dotted double;
+}
+
+input[type=number] {
+    border: 2px solid rgba(0, 128, 0, 0.5);
+}
+
+input[type=url] {
+    border: 2px darkgreen;
+    border-style: solid dashed;
+}
+
+input[type=time] {
+    background-color: rgba(255, 239, 218, 0.5);
+    border: 2px solid rgb(241, 220, 188);
+}
+
+input[type=color] {
+    border: 2px double darkslategrey;
+}
+
+input[type=file] {
+    border: 2px dashed black;
+}
+
+input[required] {
+    border-left: #3b9ec8 solid 4px;
+}
+
+button[type="submit"] {
+    background-color: #0b3d5c;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-style: outset;
+    border-color: #b1b3bd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #8d8f98;
+    color: white;
+    border-style: outset;
+    border-color: #b1b3bd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0b3d5c;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    padding: 2px;
+}
+
+#footer-mail {
+    color: lightskyblue;
+    font-style: italic;
+}
