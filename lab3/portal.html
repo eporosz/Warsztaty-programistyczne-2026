@@ -6,6 +6,8 @@
     <meta name="description" content="Oficjalny portal PNM">
     <meta name="author" content="Jan Kowalski">
     <title>Portal sportowy PNM</title>
+    <link href="portal.css" rel="stylesheet"
+          type="text/css">
     <link rel="canonical" href="portal.html">
     <base href="portal.html">
     <noscript>Twoja przeglądarka nie obsługuje JavaScript.</noscript>
@@ -14,29 +16,29 @@
 <header id="top">
     <h1>Portal sportowy &ndash; <abbr title="Piłka Nożna Mężczyzn">PNM</abbr></h1>
     <nav>
-        <ul>
-            <li><a href="/" target="_blank" rel="noopener">Strona główna</a>
+        <ul class="nav-lista">
+            <li><a href="/" rel="noopener">Strona główna</a>
                 <ul>
-                    <li><a href="/" target="_blank" rel="noopener">Aktualności</a></li>
-                    <li><a href="/" target="_blank" rel="noopener">O redakcji</a></li>
+                    <li><a href="/" rel="noopener">Aktualności</a></li>
+                    <li><a href="/" rel="noopener">O redakcji</a></li>
                 </ul>
             </li>
-            <li><a href="/" target="_blank" rel="noopener">Tabela ligowa</a>
+            <li><a href="/" rel="noopener">Tabela ligowa</a>
                 <ul>
-                    <li><a href="/" target="_blank" rel="noopener">Sezon 2025/26</a></li>
-                    <li><a href="/" target="_blank" rel="noopener">Archiwum</a></li>
+                    <li><a href="/" rel="noopener">Sezon 2025/26</a></li>
+                    <li><a href="/" rel="noopener">Archiwum</a></li>
                 </ul>
             </li>
-            <li><a href="/" target="_blank" rel="noopener">Wyniki meczów</a>
+            <li><a href="/" rel="noopener">Wyniki meczów</a>
                 <ul>
-                    <li><a href="/" target="_blank" rel="noopener">Aktualna kolejka</a></li>
-                    <li><a href="/" target="_blank" rel="noopener">Król strzelców</a></li>
+                    <li><a href="/" rel="noopener">Aktualna kolejka</a></li>
+                    <li><a href="/" rel="noopener">Król strzelców</a></li>
                 </ul>
             </li>
-            <li><a href="/" target="_blank" rel="noopener">PZPN (nowe okno)</a>
+            <li><a href="https://pzpn.pl/" target="_blank" rel="noopener">PZPN (nowe okno)</a>
                 <ul>
-                    <li><a href="/" target="_blank" rel="noopener">Reprezentacja</a></li>
-                    <li><a href="/" target="_blank" rel="noopener">Przepisy gry</a></li>
+                    <li><a href="https://pzpn.pl/reprezentacje/reprezentacja-a/kadra" target="_blank" rel="noopener">Reprezentacja</a></li>
+                    <li><a href="https://pzpn.pl/public/system/files/site_content/941/6809-PrzepisyGry_2025_6.pdf" target="_blank" rel="noopener">Przepisy gry</a></li>
                 </ul>
             </li>
         </ul>
@@ -48,6 +50,9 @@
         <h2>
             Przegląd sezonu 2025/26 &ndash; <time datetime="2026-03-10">10 marca 2026</time>
         </h2>
+        <p class="lead">
+            Sezon 2025/26 zapisze się w historii polskiej piłki nożnej jako jeden z najbardziej zaciętych &ndash; po 25 kolejkach zaledwie dwa punkty dzielą dwie czołowe drużyny.
+        </p>
         <address>Autor: Jan Kowalski <<a href="mailto:j.kowalski@portal-sportowy.pl">j.kowalski@portal-sportowy.pl</a>></address>
         <p>
             Sezon <mark>2025/26</mark> okazuje się wyjątkowo emocjonujący. <abbr title="Legia Warszawa">LW</abbr> prowadzi w tabeli, jednak <strong>różnica punktów maleje</strong> z każdą kolejką.
@@ -55,7 +60,7 @@
             Warto nacisnąć <kbd>F5</kbd>, by odświeżyć tabelę &ndash; serwer odpowiada kodem <code>200 OK</code> ze statusem <samp>{"status:"live"}</samp>.
         </p>
 
-        <h3>Tabela <abbr title="Piłka Nożna Mężczyzn">PNM</abbr> &ndash; sezon 2025/26</h3>
+        <h2>Tabela <abbr title="Piłka Nożna Mężczyzn">PNM</abbr> &ndash; sezon 2025/26</h2>
         <table border="1">
             <caption>Tabela ligowa PNM &ndash; po 25. kolejce (stan na 10.03.2026)</caption>
             <colgroup>
@@ -159,6 +164,14 @@
             </tr>
             </tfoot>
         </table>
+        <blockquote cite="#">
+            <p>
+                "Wierzymy w nasze możliwości. Każdy mecz traktujemy jak finał i właśnie to sprawia, że ta drużyna jest tak trudna do pokonania."
+            </p>
+            <p>
+                &ndash; Marek Nowicki, trener Legii Warszawa
+            </p>
+        </blockquote>
 
         <figure>
             <picture>
@@ -185,7 +198,7 @@
             </audio>
             <figcaption>Komentarz po meczu Legia Warszawa - Lech Poznań</figcaption>
         </figure>
-        <h3>Statystyki wybranych zawodników</h3>
+        <h2>Statystyki wybranych zawodników</h2>
         <details>
             <summary>Robert Wiśniewski (Legia Warszawa) &ndash; napastnik</summary>
             <dl>
@@ -231,7 +244,7 @@
                 <dd>0</dd>
             </dl>
         </details>
-        <h3>Mapa lig europejskich</h3>
+        <h2>Mapa lig europejskich</h2>
         <p>Kliknij wybrany obszar mapy, aby przejść do odpowiedniej ligi:</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Europa_Mapa.png" alt="Mapa lig europejskich" usemap="#mapa" width="640" height="418">
         <map name="mapa">
@@ -241,76 +254,90 @@
         </map>
     </article>
     <aside>
-        <h3>Słownik terminów piłkarskich</h3>
-        <dl>
-            <dt><abbr title="Video Assistant Referee">VAR</abbr></dt>
-            <dd>Video Assistant Referee — system wspomagania sędziego głównego poprzez analizę nagrań wideo.<br>
-                Sytuacje objęte VAR:
-                <dl>
-                    <dd>Gole, rzuty karne, czerwone kartki, pomyłki tożsamości</dd>
-                </dl>
-            </dd>
-            <dt>Hat-trick</dt>
-            <dd>Trzy gole strzelone przez jednego zawodnika w jednym meczu.</dd>
+        <section id="aktualnosci">
+            <h3>Aktualności</h3>
+            <ul>
+                <li><a href="#">Legia wygrywa derby stolicy 3:1</a></li>
+                <li><a href="#">Lech Poznań sprowadza nowego napastnika</a></li>
+                <li><a href="#">Reprezentacja Polski &ndash; powołania na marzec</a></li>
+            </ul>
+        </section>
+        <section id="slownik">
+            <h3>Słownik terminów piłkarskich</h3>
+            <dl>
+                <dt><abbr title="Video Assistant Referee">VAR</abbr></dt>
+                <dd>Video Assistant Referee — system wspomagania sędziego głównego poprzez analizę nagrań wideo.<br>
+                    Sytuacje objęte VAR:
+                    <dl>
+                        <dd>Gole, rzuty karne, czerwone kartki, pomyłki tożsamości</dd>
+                    </dl>
+                </dd>
+                <dt>Hat-trick</dt>
+                <dd>Trzy gole strzelone przez jednego zawodnika w jednym meczu.</dd>
 
-            <dt>Pressing</dt>
-            <dd>Taktyka polegająca na aktywnym odbiorze piłki zaraz po jej utracie.</dd>
+                <dt>Pressing</dt>
+                <dd>Taktyka polegająca na aktywnym odbiorze piłki zaraz po jej utracie.</dd>
 
-            <dt><abbr title="Expected Goals">xG</abbr></dt>
-            <dd>Statystyka określająca prawdopodobieństwo strzelenia gola z danej sytuacji (0–1).</dd>
+                <dt><abbr title="Expected Goals">xG</abbr></dt>
+                <dd>Statystyka określająca prawdopodobieństwo strzelenia gola z danej sytuacji (0–1).</dd>
 
-            <dt>Offside (Spalony)</dt>
-            <dd>Pozycja spalonego — zawodnik jest bliżej linii bramkowej przeciwnika niż przedostatni obrońca.</dd>
+                <dt>Offside (Spalony)</dt>
+                <dd>Pozycja spalonego — zawodnik jest bliżej linii bramkowej przeciwnika niż przedostatni obrońca.</dd>
 
-            <dt>Dublet</dt>
-            <dd>Zdobycie w jednym sezonie mistrzostwa kraju i pucharu krajowego przez ten sam klub.</dd>
-        </dl>
-        <h2>Transmisja na żywo &ndash; PZPN</h2>
-        <iframe src="https://www.laczynaspilka.pl/" title="Oficjalny serwis PZPN - Łączy Nas Piłka" width="640" height="450" loading="lazy">
-            Twoja przeglądarka nie obsługuje ramek iframe.
-            Możesz przejść do transmisji pod adresem: https://www.laczynaspilka.pl/
-        </iframe>
-        <h2>Top 3 królów strzelców</h2>
-        <ol>
-            <li>Robert Wiśniewski (Legia) &ndash; 18 goli
-                <ul>
-                    <li>Gole z gry: 14</li>
-                    <li>Rzuty karne: 4</li>
-                    <li>Średnia: 0,72 gola/mecz</li>
-                </ul>
-            </li>
-            <li>Piotr Malinowski (Lech) &ndash; 9 goli
-                <ul>
-                    <li>Gole z gry: 7</li>
-                    <li>Rzuty karne: 2</li>
-                    <li>Średnia: 0,39 gola/mecz</li>
-                </ul>
-            </li>
-            <li>Robert Wiśniewski (Legia) &ndash; 18 goli
-                <ul>
-                    <li>Gole z gry: 6</li>
-                    <li>Rzuty karne: 1</li>
-                    <li>Średnia: 0,32 gola/mecz</li>
-                </ul>
-            </li>
-        </ol>
+                <dt>Dublet</dt>
+                <dd>Zdobycie w jednym sezonie mistrzostwa kraju i pucharu krajowego przez ten sam klub.</dd>
+            </dl>
+        </section>
+        <section id="transmisja">
+            <h3>Transmisja na żywo &ndash; PZPN</h3>
+            <iframe src="https://www.laczynaspilka.pl/" title="Oficjalny serwis PZPN - Łączy Nas Piłka" width="640" height="450" loading="lazy">
+                Twoja przeglądarka nie obsługuje ramek iframe.
+                Możesz przejść do transmisji pod adresem: https://www.laczynaspilka.pl/
+            </iframe>
+        </section>
+        <section id="krolowie-strzelcow">
+            <h3>Top 3 królów strzelców</h3>
+            <ol>
+                <li>Robert Wiśniewski (Legia) &ndash; 18 goli
+                    <ul>
+                        <li>Gole z gry: 14</li>
+                        <li>Rzuty karne: 4</li>
+                        <li>Średnia: 0,72 gola/mecz</li>
+                    </ul>
+                </li>
+                <li>Piotr Malinowski (Lech) &ndash; 9 goli
+                    <ul>
+                        <li>Gole z gry: 7</li>
+                        <li>Rzuty karne: 2</li>
+                        <li>Średnia: 0,39 gola/mecz</li>
+                    </ul>
+                </li>
+                <li>Robert Wiśniewski (Legia) &ndash; 18 goli
+                    <ul>
+                        <li>Gole z gry: 6</li>
+                        <li>Rzuty karne: 1</li>
+                        <li>Średnia: 0,32 gola/mecz</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
     </aside>
 </main>
-    <footer>
-        <address>
-            Redakcja Portalu Sportowego<br>
-            ul. Sportowa 1, 00-001 Warszawa<br>
-            E-mail: <a href="mailto:redakcja@portal-sportowy.pl">redakcja@portal-sportowy.pl</a><br>
-            Telefon: <a href="tel:+48221234567">+48 22 123 45 67</a>
-        </address>
-        <p>
-            <small>
-                &copy; <time datetime="2026">2026</time> Portal Sportowy — <abbr title="Piłka Nożna Mężczyzn">PNM</abbr>. Wszelkie prawa zastrzeżone.
-            </small>
-        </p>
-        <p>
-            <a href="#top">&uarr; Powrót na górę strony</a>
-        </p>
-    </footer>
+<footer>
+    <address>
+        Redakcja Portalu Sportowego<br>
+        ul. Sportowa 1, 00-001 Warszawa<br>
+        E-mail: <a href="mailto:redakcja@portal-sportowy.pl">redakcja@portal-sportowy.pl</a><br>
+        Telefon: <a href="tel:+48221234567">+48 22 123 45 67</a>
+    </address>
+    <p>
+        <small>
+            &copy; <time datetime="2026">2026</time> Portal Sportowy — <abbr title="Piłka Nożna Mężczyzn">PNM</abbr>. Wszelkie prawa zastrzeżone.
+        </small>
+    </p>
+    <p>
+        <a href="#top">&uarr; Powrót na górę strony</a>
+    </p>
+</footer>
 </body>
 </html>

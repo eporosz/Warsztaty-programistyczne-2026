@@ -1,0 +1,259 @@
+body {
+    background-color: #eee;
+    font-family: Georgia, serif;
+    color: black
+}
+
+h1, h2, h3 {
+    font-family: Lato, sans-serif;
+}
+
+p {
+    font-family: Georgia, serif;
+    color: black
+}
+
+header {
+    background-color: #092b4a;
+    text-align: center;
+    padding: 2px;
+}
+#top h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: black 4px 4px 10px, dimgray 3px 3px 5px, lightblue 2px 2px 2px;
+}
+
+.nav-lista, .nav-lista ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-lista > li {
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.nav-lista > li + li {
+    border-top: 1px solid #9dbadd;
+    padding-top: 10px;
+}
+
+.nav-lista li ul li {
+    padding-left: 30px;
+}
+
+nav a {
+    color: #9dbadd;
+    text-decoration: none;
+}
+
+nav a[target="_blank"] {
+    text-decoration: underline;
+}
+
+nav a[href^="https"] {
+    color: #71b8d6;
+    font-style: italic;
+}
+
+.lead {
+    color: rgba(7, 42, 73, 0.85);
+    font-size: 1.15rem;
+    text-indent: 25px;
+    font-style: italic;
+    word-spacing: 2px;
+    line-height: 1.7;
+}
+
+h2 {
+    color: #092b4a;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+h2 + p {
+    color: #4b6584;
+    word-spacing: 5px;
+    text-indent: 20px;
+}
+
+h2 ~ h2 {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 10px gray;
+}
+
+blockquote {
+    background-color: rgba(228, 215, 169, 0.5);
+    padding: 10px 10px;
+    border: 2px solid #efcc70;
+}
+
+blockquote > p {
+    font-style: italic;
+}
+
+blockquote p + p {
+    color: #3e6083;
+    text-align: right;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+table caption {
+    margin-bottom: 5px;
+}
+
+thead th {
+    background-color: hsl(204, 100%, 15%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px;
+}
+
+thead tr + tr th {
+    background-color: hsl(204, 100%, 25%);
+}
+
+th[scope="row"] {
+    background-color: hsl(204, 100%, 15%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px;
+}
+
+tfoot th[scope="row"] {
+    background-color: hsl(204, 30%, 90%);
+    color: hsl(204, 100%, 15%);
+}
+
+tfoot th, tfoot td {
+    background-color: hsl(204, 30%, 92%);
+    color: hsl(204, 100%, 15%);
+    font-style: italic;
+}
+
+tr > td {
+    padding: 5px;
+}
+
+img[alt] {
+    border: #99b2cf 3px solid;
+}
+
+img[usemap] {
+    border: #35772f 3px solid;
+    margin-bottom: 10px;
+}
+
+figure figcaption {
+    text-align: center;
+    color: rgba(66, 99, 136, 0.8);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+details > summary {
+    color: hsl(204, 96%, 21%);
+    font-weight: bold;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+details > dl {
+    color: rgba(7, 42, 73, 0.85);
+    word-spacing: 5px;
+}
+
+details > dl > dd {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+article + aside {
+    background-color: #ebf0f6;
+}
+
+aside > section {
+    border-left: #71b8d6 solid 5px;
+    background-color: #f6f7fa;
+    text-indent: 10px;
+}
+
+aside > section + section {
+    border-left: #efcc70 solid 5px;
+}
+
+aside h3 {
+    color: #092b4a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-indent: 5px;
+}
+
+#aktualnosci ul {
+    list-style-type: square;
+    margin-left: 5px;
+    padding-bottom: 15px;
+    line-height: 1.3em;
+}
+
+#aktualnosci a {
+    color: hsl(204, 96%, 21%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+aside ol ul {
+    list-style-type: disc;
+    line-height: 1.4em;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+main > article {
+    background-color: white;
+}
+
+footer {
+    background-color: #092b4a;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 5px;
+    line-height: 1.6em;
+}
+
+footer a[href^="mailto:"] {
+    color: #7fc7e4;
+}
+
+footer a[href^="tel:"] {
+    color: #8dea99;
+    text-decoration: none;
+}
+
+footer address, footer p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+footer p small {
+    color: rgba(255, 255, 255, 0.85);
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer a[href="#top"] {
+    color: #efcc70;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
