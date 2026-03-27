@@ -99,7 +99,7 @@ legend {
 #preferencje_czytelnicze legend {
     font-style: italic;
     color: darkgreen;
-    text-transform: uppercase;
+    font-variant: small-caps;
 }
 
 #pesel {
@@ -181,7 +181,8 @@ button[type="submit"] {
     background-color: #0b3d5c;
     color: white;
     font-weight: bold;
-    text-transform: uppercase;
+    font-variant: small-caps;
+    font-size: 1em;
     letter-spacing: 2px;
     border-style: outset;
     border-color: #b1b3bd;

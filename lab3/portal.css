@@ -20,8 +20,8 @@ header {
 }
 #top h1 {
     color: white;
-    text-transform: uppercase;
-    font-size: 2.5rem;
+    font-variant: small-caps ;
+    font-size: 3.5rem;
     letter-spacing: 0.1em;
     text-shadow: black 4px 4px 10px, dimgray 3px 3px 5px, lightblue 2px 2px 2px;
 }
@@ -111,7 +111,7 @@ table caption {
 thead th {
     background-color: hsl(204, 100%, 15%);
     color: white;
-    text-transform: uppercase;
+    font-variant: small-caps ;
     letter-spacing: 1.5px;
     padding: 5px;
 }
@@ -123,7 +123,7 @@ thead tr + tr th {
 th[scope="row"] {
     background-color: hsl(204, 100%, 15%);
     color: white;
-    text-transform: uppercase;
+    font-variant: small-caps ;
     letter-spacing: 1.5px;
     padding: 5px;
 }
@@ -193,7 +193,7 @@ aside > section + section {
 aside h3 {
     color: #092b4a;
     font-weight: bold;
-    text-transform: uppercase;
+    font-variant: small-caps;
     letter-spacing: 1px;
     text-indent: 5px;
 }
@@ -247,13 +247,10 @@ footer address, footer p {
 
 footer p small {
     color: rgba(255, 255, 255, 0.85);
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 footer a[href="#top"] {
     color: #efcc70;
-    text-transform: uppercase;
+    font-variant: small-caps;
     letter-spacing: 1.5px;
 }
