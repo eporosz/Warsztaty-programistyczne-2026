@@ -12,7 +12,7 @@ header {
 }
 header h1 {
     color: hsla(0, 0%, 100%);
-    font-size: 2.9em;
+    font-size: 3em;
     font-variant: small-caps;
     margin: 5px;
     text-shadow: black 3px 3px 12px, #3b9ec8 2px 2px 3px;
