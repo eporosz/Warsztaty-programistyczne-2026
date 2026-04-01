@@ -1,0 +1,232 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: black;
+    background-color: #f0f2f5;
+}
+
+body > header {
+    background-color: #2c3f50;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #19252f;
+    padding-left: 15px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+aside {
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 300px;
+    padding-left: 8px;
+    padding-right: 10px;
+    border-right: 2px solid silver;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+}
+
+aside h4 {
+    color: #2c3f50;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ebebeb;
+}
+
+aside p label {
+    color: #2c2c2c;
+}
+
+aside input, aside select, aside textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    font-size: 1em;
+    border: 1.5px solid darkgray;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 3px;
+}
+
+aside select {
+    border-radius: 8px;
+}
+
+aside button {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    width: 100%;
+    border: 2px solid #2980b9;
+    border-radius: 3px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 60px;
+    margin-left: 300px;
+}
+
+#pasek-statystyk p {
+    display: inline-block;
+    background-color: white;
+    color: #4c4c4c;
+    text-align: center;
+    border: 1.5px solid silver;
+    border-radius: 5px;
+    margin-left: 7px;
+    padding: 5px 15px;
+}
+
+#pasek-statystyk span {
+    color: #2c3f50;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#pasek-statystyk #wszystkie {
+    border-top: 3px solid #2c3f50;
+    margin-left: 15px;
+}
+
+#pasek-statystyk #do-zrobienia {
+    border-top: 3px solid #2980b9;
+}
+
+#pasek-statystyk #w-trakcie {
+    border-top: 3px solid #e67e23;
+}
+
+#pasek-statystyk #zakonczone {
+    border-top: 3px solid #26ad60;
+}
+
+#pasek-sortowania {
+    margin-left: 15px;
+}
+
+#pasek-sortowania button {
+    display: inline-block;
+    background-color: white;
+    color: #2c2c2c;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border: 1.5px solid darkgray;
+    border-radius: 3px;
+    padding: 6px 12px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+#pasek-sortowania #aktywny {
+    background-color: #2980b9;
+    color: white;
+    border: 1.5px solid #2577ad;
+    margin-left: 7px;
+}
+
+.karta-zadania {
+    position: relative;
+    color: black;
+    border: 1.5px solid darkgray;
+    border-radius: 8px;
+    padding-left: 17px;
+    padding-bottom: 13px;
+    margin: 12px;
+}
+
+.karta-niski {
+    background-color: rgba(38, 173, 96, 0.1);
+    border-left: 5px solid #26ad60;
+}
+
+.karta-sredni {
+    background-color: rgba(239, 160, 42, 0.1);
+    border-left: 5px solid #e67e23;
+}
+
+.karta-wysoki {
+    background-color: rgba(192, 58, 43, 0.1);
+    border-left: 5px solid #c03a2b;
+}
+
+#karty-zadan header span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin-right: 10px;
+}
+
+span.priorytet-niski {
+    background-color: #26ad60;
+    border: 1.5px solid #1d8449;
+}
+
+span.priorytet-sredni {
+    background-color: #e67e23;
+    border: 1.5px solid #ca6f1d;
+}
+
+span.priorytet-wysoki {
+    background-color: #c03a2b;
+    border: 1.5px solid #a93225;
+}
+
+.karta-zadania h4 {
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+.info {
+    color: #4a4a4a;
+    padding-bottom: 7px;
+}
+
+.opis {
+    border-top: 1.5px dashed silver;
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+
+span.status {
+    display: inline-block;
+    font-weight: 400;
+    border: 1.5px solid;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+span.do-zrobienia {
+    background-color: #ddf0ff;
+    color: #1a4663;
+    border-color: #a4c8df;
+}
+
+span.w-trakcie {
+    background-color: #fff7d3;
+    color: #735d0c;
+    border-color: #f3d266;
+}
+
+span.zakonczone {
+    background-color: #ccffe3;
+    color: #156035;
+    border-color: #91dcb1
+}
