@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Menedżer zadań</title>
+    <link href="style.css" rel="stylesheet"
+          type="text/css">
+</head>
+<body>
+<header>Menedżer Zadań</header>
+<aside>
+    <form>
+        <h4>Dodaj zadanie</h4>
+        <div>
+            <label for="tytul-zad">Tytuł zadania</label><br>
+            <input type="text" name="tytul-zad" id="tytul-zad" placeholder="Wpisz tytuł..." required>
+        </div>
+        <div>
+            <label for="kategoria-zad">Kategoria</label><br>
+            <select name="kategoria-zad" id="kategoria-zad" required>
+                <option disabled selected hidden>-- wybierz --</option>
+                <option value="Praca">Praca</option>
+                <option value="Dom">Dom</option>
+                <option value="Nauka">Nauka</option>
+                <option value="Zdrowie">Zdrowie</option>
+                <option value="Inne">Inne</option>
+            </select>
+        </div>
+        <div>
+            <label for="priorytet-zad">Priorytet</label><br>
+            <select name="priorytet-zad" id="priorytet-zad" required>
+                <option disabled selected hidden>-- wybierz --</option>
+                <option value="Niski">Niski</option>
+                <option value="Średni">Średni</option>
+                <option value="Wysoki">Wysoki</option>
+            </select>
+        </div>
+        <div>
+            <label for="data-wykonania">Data wykonania</label><br>
+            <input type="date" name="data-wykonania" id="data-wykonania" required>
+        </div>
+        <div>
+            <label for="opis-zad">Opis zadania</label><br>
+            <textarea name="opis-zad" id="opis-zad" placeholder="Opcjonalny opis..."></textarea>
+        </div>
+        <div>
+            <label for="status-zad">Status</label><br>
+            <select name="status-zad" id="status-zad" required>
+                <option value="Do zrobienia">Do zrobienia</option>
+                <option value="W trakcie">W trakcie</option>
+                <option value="Zakończone">Zakończone</option>
+            </select>
+        </div>
+        <div>
+            <button id="dodaj-zad" type="submit">Dodaj zadanie</button>
+        </div>
+    </form>
+</aside>
+<main>
+    <div id="pasek-statystyk">
+        <p id="wszystkie">
+            <span>6</span><br>Wszystkie
+        </p>
+        <p id="do-zrobienia">
+            <span>3</span><br>Do zrobienia
+        </p>
+        <p id="w-trakcie">
+            <span>2</span><br>W trakcie
+        </p>
+        <p id="zakonczone">
+            <span>1</span><br>Zakończone
+        </p>
+    </div>
+    <div id="pasek-sortowania">
+        Sortuj:
+        <button id="aktywny">Tytuł &uarr;</button>
+        <button>Priorytet</button>
+        <button>Data</button>
+        <button>Kategoria</button>
+    </div>
+    <div id="karty-zadan">
+
+        <div class="karta-zadania karta-wysoki">
+            <header>
+                <span class="priorytet-wysoki">Wysoki</span>
+                <h4>Przygotuj prezentację dla klienta</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Praca</strong></span>
+                <span>Termin: <strong>2026-03-30</strong></span>
+            </div>
+            <div class="opis">
+                Prezentacja postępów w nowym projekcie webowym. Wymagane slajdy i demo działającej aplikacji.
+            </div>
+            <div>
+                <span class="status w-trakcie">W trakcie</span>
+            </div>
+        </div>
+
+        <div class="karta-zadania karta-niski">
+            <header>
+                <span class="priorytet-niski">Niski</span>
+                <h4>Zakupy spożywcze</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Dom</strong></span>
+                <span>Termin: <strong>2026-03-28</strong></span>
+            </div>
+            <div class="opis">
+                Mleko, chleb, warzywa sezonowe, kawa. Pamiętać o ekotorbie.
+            </div>
+            <div>
+                <span class="status do-zrobienia">Do zrobienia</span>
+            </div>
+        </div>
+
+        <div class="karta-zadania karta-sredni">
+            <header>
+                <span class="priorytet-sredni">Średni</span>
+                <h4>Nauka CSS &ndash; model pudełkowy</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Nauka</strong></span>
+                <span>Termin: <strong>2026-04-05</strong></span>
+            </div>
+            <div class="opis">
+                Przerobić materiały z wykładu 4: padding, margin, border, float, position.
+            </div>
+            <div>
+                <span class="status do-zrobienia">Do zrobienia</span>
+            </div>
+        </div>
+
+        <div class="karta-zadania karta-wysoki">
+            <header>
+                <span class="priorytet-wysoki">Wysoki</span>
+                <h4>Opłacić rachunki</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Dom</strong></span>
+                <span>Termin: <strong>2026-03-29</strong></span>
+            </div>
+            <div class="opis">
+                Prąd, internet, czynsz. Przelew bankowy lub przez aplikację mobilną.
+            </div>
+            <div>
+                <span class="status zakonczone">Zakończone</span>
+            </div>
+        </div>
+
+        <div class="karta-zadania karta-sredni">
+            <header>
+                <span class="priorytet-sredni">Średni</span>
+                <h4>Przegląd techniczny samochodu</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Inne</strong></span>
+                <span>Termin: <strong>2026-04-10</strong></span>
+            </div>
+            <div class="opis">
+                Umówić wizytę w warsztacie na wymianę oleju i sprawdzanie hamulców.
+            </div>
+            <div>
+                <span class="status w-trakcie">W trakcie</span>
+            </div>
+        </div>
+
+        <div class="karta-zadania karta-niski">
+            <header>
+                <span class="priorytet-niski">Niski</span>
+                <h4>Wizyta u dentysty</h4>
+            </header>
+            <div class="info">
+                <span>Kategoria: <strong>Zdrowie</strong></span>
+                <span>Termin: <strong>2026-04-15</strong></span>
+            </div>
+            <div class="opis">
+                Kontrolna wizyta u stomatologa. Zadzwonić i umówić termin w przyszłym tygodniu.
+            </div>
+            <div>
+                <span class="status do-zrobienia">Do zrobienia</span>
+            </div>
+        </div>
+
+    </div>
+</main>
+</body>
+</html>
