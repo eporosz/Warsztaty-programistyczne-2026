@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Menedżer zadań</title>
-    <link href="style.css" rel="stylesheet"
+    <link href="test1.css" rel="stylesheet"
           type="text/css">
 </head>
-<body>
-<header>Menedżer Zadań</header>
+<body class="grid-container">
+<header>
+    <div id="title">Menedżer Zadań</div>
+    <nav class="nav-list">
+        <a href="#" class="nav-item">Wszystkie</a>
+        <a href="#" class="nav-item">Do zrobienia</a>
+        <a href="#" class="nav-item">W trakcie</a>
+        <a href="#" class="nav-item nav-active">Zakończone</a>
+        <img class="nav-item" id="profile-pic" src="https://www.w3schools.com/howto/img_avatar2.png">
+    </nav>
+</header>
 <aside>
+    <h4>Dodaj zadanie</h4>
     <form>
-        <h4>Dodaj zadanie</h4>
         <div>
-            <label for="tytul-zad">Tytuł zadania</label><br>
+            <label for="tytul-zad">Tytuł zadania</label>
             <input type="text" name="tytul-zad" id="tytul-zad" placeholder="Wpisz tytuł..." required>
         </div>
         <div>
-            <label for="kategoria-zad">Kategoria</label><br>
+            <label for="kategoria-zad">Kategoria</label>
             <select name="kategoria-zad" id="kategoria-zad" required>
                 <option disabled selected hidden>-- wybierz --</option>
                 <option value="Praca">Praca</option>
@@ -27,7 +36,7 @@
             </select>
         </div>
         <div>
-            <label for="priorytet-zad">Priorytet</label><br>
+            <label for="priorytet-zad">Priorytet</label>
             <select name="priorytet-zad" id="priorytet-zad" required>
                 <option disabled selected hidden>-- wybierz --</option>
                 <option value="Niski">Niski</option>
@@ -36,15 +45,15 @@
             </select>
         </div>
         <div>
-            <label for="data-wykonania">Data wykonania</label><br>
+            <label for="data-wykonania">Data wykonania</label>
             <input type="date" name="data-wykonania" id="data-wykonania" required>
         </div>
         <div>
-            <label for="opis-zad">Opis zadania</label><br>
+            <label for="opis-zad">Opis zadania</label>
             <textarea name="opis-zad" id="opis-zad" placeholder="Opcjonalny opis..."></textarea>
         </div>
         <div>
-            <label for="status-zad">Status</label><br>
+            <label for="status-zad">Status</label>
             <select name="status-zad" id="status-zad" required>
                 <option value="Do zrobienia">Do zrobienia</option>
                 <option value="W trakcie">W trakcie</option>
@@ -57,129 +66,199 @@
     </form>
 </aside>
 <main>
+    <div id="zad-dnia" class="karta-zadania">
+        <div id="glowna-tresc">
+            <div class="naglowek">
+                <h4>zadanie dnia</h4>
+                <h3>Wdrożenie nowego systemu logowania</h3>
+            </div>
+            <div class="info">
+                <span>Kategoria: <strong>Praca</strong></span>
+            </div>
+            <div class="opis">
+                Migracja z sesji serwerowych na JWT. Wymaga aktualizacji backendu, frontendu i dokumentacji API. Koniecznie przetestować przepływ OAuth z dostawcą zewnętrznym.
+            </div>
+        </div>
+        <footer>
+            <span>Termin: <strong>2026-04-10</strong></span>
+            <span class="priorytet priorytet-wysoki">Wysoki</span>
+            <span class="status w-trakcie">W trakcie</span>
+        </footer>
+    </div>
+
     <div id="pasek-statystyk">
         <p id="wszystkie">
-            <span>6</span><br>Wszystkie
+            <span>8</span><br>Wszystkie
         </p>
         <p id="do-zrobienia">
             <span>3</span><br>Do zrobienia
         </p>
         <p id="w-trakcie">
-            <span>2</span><br>W trakcie
+            <span>3</span><br>W trakcie
         </p>
         <p id="zakonczone">
-            <span>1</span><br>Zakończone
+            <span>2</span><br>Zakończone
         </p>
     </div>
     <div id="pasek-sortowania">
-        Sortuj:
+        <span>Sortuj:</span>
         <button id="aktywny">Tytuł &uarr;</button>
         <button>Priorytet</button>
         <button>Data</button>
         <button>Kategoria</button>
+        <button>Status</button>
     </div>
     <div id="karty-zadan">
 
-        <div class="karta-zadania karta-wysoki">
-            <header>
-                <span class="priorytet-wysoki">Wysoki</span>
-                <h4>Przygotuj prezentację dla klienta</h4>
-            </header>
+        <div id="col-2" class="karta-zadania karta-wysoki">
+            <div class="naglowek">
+                <h4>Wdrożenie nowego systemu logowania</h4>
+                <span class="priorytet priorytet-wysoki">Wysoki</span>
+            </div>
             <div class="info">
                 <span>Kategoria: <strong>Praca</strong></span>
-                <span>Termin: <strong>2026-03-30</strong></span>
+                <span>Termin: <strong>2026-04-10</strong></span>
             </div>
             <div class="opis">
-                Prezentacja postępów w nowym projekcie webowym. Wymagane slajdy i demo działającej aplikacji.
+                Migracja z sesji serwerowych na JWT. Wymaga aktualizacji backendu, frontendu i dokumentacji API. Koniecznie przetestować przepływ OAuth z dostawcą zewnętrznym.
             </div>
-            <div>
+            <footer>
                 <span class="status w-trakcie">W trakcie</span>
+                <span class="deadline">Termin za 7 dni</span>
+            </footer>
+        </div>
+
+        <div class="karta-zadania karta-wysoki">
+            <div class="naglowek">
+                <h4>Naprawa błędu w płatnościach</h4>
+                <span class="priorytet priorytet-wysoki">Wysoki</span>
             </div>
+            <div class="info">
+                <span>Kategoria: <strong>Praca</strong></span>
+                <span>Termin: <strong>2026-04-05</strong></span>
+            </div>
+            <div class="opis">
+                Zduplikowane transakcje przy wielokrotnym kliknięciu przycisku "Zapłać". Dodać blokadę po pierwszym kliknięciu.
+            </div>
+            <footer>
+                <span class="status do-zrobienia">Do zrobienia</span>
+                <span class="deadline">Termin za 2 dni</span>
+            </footer>
+        </div>
+
+        <div class="karta-zadania karta-sredni">
+            <div class="naglowek">
+                <h4>Nauka CSS Grid i Flexbox</h4>
+                <span class="priorytet priorytet-sredni">Średni</span>
+            </div>
+            <div class="info">
+                <span>Kategoria: <strong>Nauka</strong></span>
+                <span>Termin: <strong>2026-04-12</strong></span>
+            </div>
+            <div class="opis">
+                Przerobić materiały z wykładu 5: grid-template-areas, repeat, minmax, flexbox gap, flex-grow, align-self.
+            </div>
+            <footer>
+                <span class="status w-trakcie">W trakcie</span>
+                <span class="deadline">Termin za 9 dni</span>
+            </footer>
+        </div>
+
+        <div class="karta-zadania karta-sredni">
+            <div class="naglowek">
+                <h4>Przegląd techniczny samochodu</h4>
+                <span class="priorytet priorytet-sredni">Średni</span>
+            </div>
+            <div class="info">
+                <span>Kategoria: <strong>Inne</strong></span>
+                <span>Termin: <strong>2026-04-20</strong></span>
+            </div>
+            <div class="opis">
+                Wymiana oleju, sprawdzenie hamulców i ciśnienia opon. Umówić wizytę telefonicznie.
+            </div>
+            <footer>
+                <span class="status do-zrobienia">Do zrobienia</span>
+                <span class="deadline">Termin za 17 dni</span>
+            </footer>
         </div>
 
         <div class="karta-zadania karta-niski">
-            <header>
-                <span class="priorytet-niski">Niski</span>
+            <div class="naglowek">
                 <h4>Zakupy spożywcze</h4>
-            </header>
+                <span class="priorytet priorytet-niski">Niski</span>
+            </div>
             <div class="info">
                 <span>Kategoria: <strong>Dom</strong></span>
                 <span>Termin: <strong>2026-03-28</strong></span>
             </div>
             <div class="opis">
-                Mleko, chleb, warzywa sezonowe, kawa. Pamiętać o ekotorbie.
+                Mleko, chleb, warzywa, kawa. Pamiętać o ekotorbie.
             </div>
-            <div>
-                <span class="status do-zrobienia">Do zrobienia</span>
-            </div>
-        </div>
-
-        <div class="karta-zadania karta-sredni">
-            <header>
-                <span class="priorytet-sredni">Średni</span>
-                <h4>Nauka CSS &ndash; model pudełkowy</h4>
-            </header>
-            <div class="info">
-                <span>Kategoria: <strong>Nauka</strong></span>
-                <span>Termin: <strong>2026-04-05</strong></span>
-            </div>
-            <div class="opis">
-                Przerobić materiały z wykładu 4: padding, margin, border, float, position.
-            </div>
-            <div>
-                <span class="status do-zrobienia">Do zrobienia</span>
-            </div>
-        </div>
-
-        <div class="karta-zadania karta-wysoki">
-            <header>
-                <span class="priorytet-wysoki">Wysoki</span>
-                <h4>Opłacić rachunki</h4>
-            </header>
-            <div class="info">
-                <span>Kategoria: <strong>Dom</strong></span>
-                <span>Termin: <strong>2026-03-29</strong></span>
-            </div>
-            <div class="opis">
-                Prąd, internet, czynsz. Przelew bankowy lub przez aplikację mobilną.
-            </div>
-            <div>
+            <footer>
                 <span class="status zakonczone">Zakończone</span>
-            </div>
-        </div>
-
-        <div class="karta-zadania karta-sredni">
-            <header>
-                <span class="priorytet-sredni">Średni</span>
-                <h4>Przegląd techniczny samochodu</h4>
-            </header>
-            <div class="info">
-                <span>Kategoria: <strong>Inne</strong></span>
-                <span>Termin: <strong>2026-04-10</strong></span>
-            </div>
-            <div class="opis">
-                Umówić wizytę w warsztacie na wymianę oleju i sprawdzanie hamulców.
-            </div>
-            <div>
-                <span class="status w-trakcie">W trakcie</span>
-            </div>
+                <span class="deadline">Termin minął</span>
+            </footer>
         </div>
 
         <div class="karta-zadania karta-niski">
-            <header>
-                <span class="priorytet-niski">Niski</span>
+            <div class="naglowek">
                 <h4>Wizyta u dentysty</h4>
-            </header>
+                <span class="priorytet priorytet-niski">Niski</span>
+            </div>
             <div class="info">
                 <span>Kategoria: <strong>Zdrowie</strong></span>
-                <span>Termin: <strong>2026-04-15</strong></span>
+                <span>Termin: <strong>2026-04-25</strong></span>
             </div>
             <div class="opis">
-                Kontrolna wizyta u stomatologa. Zadzwonić i umówić termin w przyszłym tygodniu.
+                Kontrolna wizyta u stomatologa. Zadzwonić i umówić termin.
             </div>
-            <div>
+            <footer>
                 <span class="status do-zrobienia">Do zrobienia</span>
+                <span class="deadline">Termin za 22 dni</span>
+            </footer>
+        </div>
+
+        <div id="row-2" class="karta-zadania karta-wysoki">
+            <div class="naglowek">
+                <h4>Migracja bazy danych do PostgreSQL</h4>
+                <span class="priorytet priorytet-wysoki">Wysoki</span>
             </div>
+            <div class="info">
+                <span>Kategoria: <strong>Praca</strong></span>
+                <span>Termin: <strong>2026-04-18</strong></span>
+            </div>
+            <div class="opis">
+                Migracja z MySQL 5.7 na PostgreSQL 16. Etapy: eksport danych, konwersja schematu, import, testy regresji, przełączenie ruchu produkcyjnego.
+                <ul>
+                    <li>Eksport danych z MySQL</li>
+                    <li>Konwersja schematu</li>
+                    <li>Import do PostgreSQL</li>
+                    <li>Testy regresji</li>
+                    <li>Przełączenie produkcji</li>
+                </ul>
+            </div>
+            <footer>
+                <span class="status w-trakcie">W trakcie</span>
+                <span class="deadline">Termin za 15 dni</span>
+            </footer>
+        </div>
+
+        <div class="karta-zadania karta-niski">
+            <div class="naglowek">
+                <h4>Aktualizacja README projektu</h4>
+                <span class="priorytet priorytet-niski">Niski</span>
+            </div>
+            <div class="info">
+                <span>Kategoria: <strong>Praca</strong></span>
+                <span>Termin: <strong>2026-04-01</strong></span>
+            </div>
+            <div class="opis">
+                Zaktualizować instrukcję instalacji i opis API w pliku README.md repozytorium.
+            </div>
+            <footer>
+                <span class="status zakonczone">Zakończone</span>
+                <span class="deadline">Termin minął</span>
+            </footer>
         </div>
 
     </div>
