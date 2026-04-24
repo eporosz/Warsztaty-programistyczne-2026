@@ -169,6 +169,9 @@ $stat_minuty = array_sum(array_column($tasks, 'estimated_minutes'));
         <p id="zakonczone">
             <span><?php echo $stat_zakonczone; ?></span><br>Zakończone
         </p>
+        <p>
+            <span><?php echo $stat_minuty; ?></span><br>Suma minut
+        </p>
     </div>
     <div id="karty-zadan">
         <?php foreach ($tasks as $task): ?>
