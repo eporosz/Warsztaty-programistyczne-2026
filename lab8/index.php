@@ -38,21 +38,21 @@ function formatTaskDescription($description) {
 
     // Zamiana URL na linki HTML
     $description = preg_replace(
-            '/\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/i',
+            '/\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/i', // Wzorzec szuka 'http', 'https' lub 'ftp', a po nich ciągu znaków dopuszczalnych w adresach URL, ignorując wielkość liter
             '<a href="$0" target="_blank">$0</a>',
             $description
     );
 
     // Wykrywanie i formatowanie tagów
     $description = preg_replace(
-            '/#([a-zA-Z0-9_]+)/',
+            '/#([a-zA-Z0-9_]+)/',  // Wzorzec szuka znaku '#', a po nim co najmniej jednego znaku alfanumerycznego lub podkreślnika
             '<span class="tag">#$1</span>',
             $description
     );
 
     // Wykrywanie i formatowanie list punktowanych
     $description = preg_replace(
-            '/^[\s]*[-*+][\s]+(.+)$/m',
+            '/^[\s]*[-*+][\s]+(.+)$/m', // Wzorzec szuka na początku linii opcjonalnych spacji, potem znaku -, * lub +, a następnie spacji i dowolnego tekstu; /m - wieloliniowość
             '<li>$1</li>',
             $description
     );
@@ -65,27 +65,27 @@ function formatTaskDescription($description) {
 
     // Wykrywanie numerów telefonów (formaty: 123456789, 123-456-789, 123 456 789, opcjonalnie z +48)
     $description = preg_replace(
-            '/(?<!\d)(?:\+48\s?)?(?:\d{3}[\s-]?\d{3}[\s-]?\d{3})(?!\d)/',
+            '/(?<!\d)(?:\+48\s?)?(?:\d{3}[\s-]?\d{3}[\s-]?\d{3})(?!\d)/', // Wzorzec szuka opcjonalnego +48, a następnie trzech bloków po 3 cyfry oddzielonych spacją, myślnikiem lub niczym
             '<strong>$0</strong>',
             $description
     );
 
     // Wykrywanie dat w formacie RRRR-MM-DD
     $description = preg_replace(
-            '/\b\d{4}-\d{2}-\d{2}\b/',
+            '/\b\d{4}-\d{2}-\d{2}\b/', // \b to granice słowa, \d{4} oznacza 4 cyfry (rok), \d{2} - dwie cyfry (miesiąc/dzień), oddzielone myślnikami.
             '<strong>$0</strong>',
             $description
     );
 
     // Wykrywanie godzin w formacie HH:MM
     $description = preg_replace(
-            '/\b([01]?[0-9]|2[0-3]):[0-5][0-9]\b/',
+            '/\b([01]?[0-9]|2[0-3]):[0-5][0-9]\b/', // \b([01]?[0-9]|2[0-3]) dopasowuje godziny (od 00 do 23), a [0-5][0-9] dopasowuje minuty od 00 do 59.
             '<strong>$0</strong>',
             $description
     );
 
     // Wyróżnianie szukanego tekstu w opisie (jeśli wpisano zapytanie)
-    if (!empty($search_query) && !str_starts_with($search_query, '/')) {
+    if (!empty($search_query) && strpos($search_query, '/') !== 0) {
         $quoted_pattern = preg_quote($search_query, '/');
         $description = preg_replace('/(' . $quoted_pattern . ')/i', '<mark>$1</mark>', $description);
     }
@@ -205,16 +205,20 @@ $filtered_tasks = $tasks;
 // Filtrowanie
 if (!empty($search_query)) {
     // Jeśli input zaczął się od znaku '/', używamy regex, w przeciwnym wypadku traktujemy jako zwykły tekst
-    $search_pattern = str_starts_with($search_query, '/') ? $search_query : ('/' . preg_quote($search_query, '/') . '/i');
+    $search_pattern = (strpos($search_query, '/') === 0) ? $search_query : ('/' . preg_quote($search_query, '/') . '/i');
     $filtered_tasks = searchTasks($filtered_tasks, $search_pattern);
 }
 
 if (!empty($filter_status)) {
-    $filtered_tasks = array_filter($filtered_tasks, fn($t) => $t['status'] === $filter_status);
+    $filtered_tasks = array_filter($filtered_tasks, function($t) use ($filter_status) {
+        return $t['status'] === $filter_status;
+    });
 }
 
 if (!empty($filter_priority)) {
-    $filtered_tasks = array_filter($filtered_tasks, fn($t) => $t['priority'] === $filter_priority);
+    $filtered_tasks = array_filter($filtered_tasks, function($t) use ($filter_priority) {
+        return $t['priority'] === $filter_priority;
+    });
 }
 
 if (!empty($filter_tag)) {
@@ -391,7 +395,7 @@ $stat_minuty = array_sum(array_column($filtered_tasks, 'estimated_minutes'));
 
                 // Wyróżnianie szukanego tekstu w tytule
                 $display_title = htmlspecialchars($task['title']);
-                if (!empty($search_query) && !str_starts_with($search_query, '/')) {
+                if (!empty($search_query) && strpos($search_query, '/') !== 0) {
                     $display_title = preg_replace('/(' . preg_quote($search_query, '/') . ')/i', '<mark>$1</mark>', $display_title);
                 }
                 ?>
